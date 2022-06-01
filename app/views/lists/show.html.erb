@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <% if flash[:notice] %>
+    <div class="flash">
+      <%= flash[:notice] %>
+    </div>
+    <% end %>
+    <a>
+      <p>
+        <strong>Title: </strong><%= @list.title %>
+      </p>
+      <p>
+        <strong>Body: </strong><%= @list.body %>
+      </p>
+
+    <%= link_to "Edit", edit_list_path(@list.id) %>
+    </a>
+   |
+  <a class="back" href=/books>Back</a>
+</body>
+
+
+</html>
